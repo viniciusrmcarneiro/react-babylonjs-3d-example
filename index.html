@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+    <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8">
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .scenes {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: cyan;
+        }
+
+        .component {
+            touch-action: none;
+            flex: 1 1 100%;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="scenes">
+
+        <canvas class="component vtree1"></canvas>
+        <canvas class="component vtree2"></canvas>
+
+    </div>
+</body>
+</html>
