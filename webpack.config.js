@@ -3,13 +3,14 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/main.js',
+    entry: './src/index.js',
     output: {
         filename: 'bundle.js',
     },
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: ['./dist', path.resolve(__dirname, 'public')],
+        contentBase: [path.resolve(__dirname, 'public')],
+        publicPath: "/",
         hot: true,
     },
     module: {
@@ -24,14 +25,12 @@ module.exports = {
         ],
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            bbb: ['react-babylonjs-3d', 'hhh'],
-        }),
-        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './index.html',
             title: 'BabylonJS as React',
             inject: 'body',
         }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
     ],
 };
