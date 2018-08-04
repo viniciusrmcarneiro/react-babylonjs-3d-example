@@ -1,23 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const { elements: { styles } } = require("react-babylonjs-3d");
+const { elements: { styles } } = require('react-babylonjs-3d');
 
 const groundTexture = styles.texture({
-    url: "/assets/textures/tile.png",
+    url: '/assets/textures/tile.png',
 });
 
 const groundMaterial = styles.shaderMaterial({
-    name: "ground-tiled-1",
-    shaderPath: "/assets/shaders/groundTile",
-    attributes: ["position", "uv"],
-    uniforms: [
-        "worldViewProjection",
-        "boxSize",
-        "width",
-        "height",
-        "edgeColor",
-        "hue",
-    ],
+    name: 'ground-tiled-1',
+    shaderPath: '/assets/shaders/groundTile',
+    attributes: ['position', 'uv'],
+    unforms: ['worldViewProjection', 'boxSize', 'width', 'height', 'edgeColor', 'hue'],
     width: 2000,
     height: 2000,
     boxSize: 0.5,

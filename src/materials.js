@@ -1,4 +1,4 @@
-const { elements: { styles } } = require("react-babylonjs-3d");
+const { elements: { styles } } = require('react-babylonjs-3d');
 
 export const mat01 = styles.standardMaterial({
     diffuseColor: [1, 0, 0],

@@ -7,10 +7,12 @@ module.exports = {
     output: {
         filename: 'bundle.js',
     },
+    mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
         contentBase: [path.resolve(__dirname, 'public')],
-        publicPath: "/",
+        publicPath: '/',
+        host: '0.0.0.0',
         hot: true,
     },
     module: {
